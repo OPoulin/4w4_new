@@ -6,35 +6,56 @@ https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4Iiwi
 
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fenix&family=Madimi+One&display=swap');
+
+
 h1 {
     font-size: clamp(1.875rem, -1.25rem + 10vw, 5.625rem);
     text-shadow: 3px 5px 6px var(--_couleur-ombrage);
     font-weight: bold;
     letter-spacing: -3px;
+    font-family: "Madimi One", sans-serif;
 }
 
 
 h2 { 
     font-size: clamp(1.5625rem, -0.2604rem + 5.8333vw, 3.75rem);
     font-weight: bold;
+    font-family: "Madimi One", sans-serif;
 }
 
 h3 {
 
    font-size: clamp(1.4375rem, 0.0313rem + 4.5vw, 3.125rem);
- 
-       font-weight: bold;
+   font-family: "Madimi One", sans-serif;
+   font-weight: bold;
 
 }
 
-h4 {}
-h5 {}
-h6 {}
+h4 {
+    font-family: "Fenix", serif;
+}
+h5 {
+    font-family: "Fenix", serif;
+}
+h6 {
+    font-family: "Fenix", serif;
+}
 
 p {
     font-size: clamp(1rem, 0.4792rem + 1.6667vw, 1.625rem);
     line-height: 1.8rem;
     padding : 2rem 0;
+    font-family: "Fenix", serif;
+}
+
+ul {
+    font-family: "Madimi One", sans-serif;
+}
+
+li {
+    font-family: "Madimi One", sans-serif;
 }
 
 hr {}
@@ -47,6 +68,7 @@ blockquote {
     font-size: clamp(1.25rem, 0.7292rem + 1.6667vw, 1.875rem);
     font-style: italic;
     border-left: 10px solid var(--_couleur-bordure);
+    font-family: "Fenix", serif;
 
 }
 
