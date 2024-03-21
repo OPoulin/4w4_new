@@ -34,7 +34,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
   --hu1: var(--angle-initial);
   --hu2: calc(var(--hu1) + var(--increment-angle));
   --hu3: calc(var(--hu2) + var(--increment-angle));
-  --couleur-arriere-menu: hsl(var(--hu1),var(--s-couleur-arriere), 50%);
+  --couleur-arriere-menu: hsl(var(--hu1),var(--s-couleur-arriere), 70%);
+  --couleur-arriere-menu-2: hsl(var(--hu1),var(--s-couleur-arriere), 50%);
   --couleur-arriere-accueil: hsl(var(--hu1),var(--s-couleur-arriere), 65%);
   --couleur-arriere-galerie: hsl(var(--hu2),var(--s-couleur-arriere), 75%);
   --couleur-arriere-evenement: hsl(var(--hu3),var(--s-couleur-arriere), 70%);
@@ -182,6 +183,12 @@ ul {
 
 li {
   font-family: "Madimi One", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: rgb(5, 0, 34);
+}
+li:active {
+  color: rgb(15, 0, 98);
 }
 
 blockquote {
@@ -348,7 +355,20 @@ body {
 }
 
 #menu {
-  background-color: var(--couleur-arriere-menu);
+  background-image: linear-gradient(90deg, var(--couleur-arriere-menu), var(--couleur-arriere-menu-2));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-logo {
+  width: 10%;
+  height: auto;
+}
+
+.custom-logo-link {
+  width: 10x;
 }
 
 .entete__header {

@@ -56,6 +56,12 @@ ul {
 
 li {
     font-family: "Madimi One", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(5, 0, 34);
+    &:active {
+        color: rgb(15, 0, 98);
+    }
 }
 
 hr {}
