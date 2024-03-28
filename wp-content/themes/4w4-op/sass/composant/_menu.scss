@@ -11,15 +11,19 @@
 </nav>
 */
 .menu-principal-container { //nav
-    border :  1px solid #aaa;
     position: absolute;
     top:0;
     left:50px;
     z-index: 2;
     transform : translateX(-200%);
+    background-color: rgba(80, 56, 11, 0.479);
+    border: black 2px solid;
+    padding: 2%;
     @media screen and (min-width:700px) {
       position: static;
       transform : translateX(0);
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
 }
 }
 
@@ -37,7 +41,11 @@
 
 }
 .menu-item{ //li
-
+  margin-bottom: 7px;
+  color: rgba(108, 183, 221, 0.795);
+  @media screen and (min-width:700px) {
+    color: black;
+   }
 }
 
 .menu-item a{ //li a

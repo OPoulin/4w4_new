@@ -5,7 +5,6 @@
 ?>
 
 <?php get_header(); ?>
-<h2>index.php</h2>
 <div id="entete" class="global">
         <section class="entete__header">  
                         <!-- facebook -->

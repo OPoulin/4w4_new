@@ -4,19 +4,20 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    border: solid rgba(0, 0, 0, 0.115) 2px;
 }
 
 .custom-logo {
-    width: 10%;
+    width: 5%;
     height: auto;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    z-index: 8;
 }
 
 .custom-logo-link {
-    width: 10x;
-}
-
-.menu-principal-container {
-
+    
 }
 
 .entete__header {
@@ -39,13 +40,13 @@
    // border : 1px solid #fff;
     width : 100%;
    // height : 50%;
-    background-image: url("images/wordpress-theme.png");  
+    background-image: url("images/Avion.png");  
     // background-image: url("images/ocean.jpg");  
     background-repeat: no-repeat;
 
     background-position: 50% 90%;
     // background-size:400px;
-     background-size:content;
+     background-size: 60%;
     text-align: center;
     gap: 2rem;
 }
