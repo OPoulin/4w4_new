@@ -11,12 +11,14 @@
 </nav>
 */
 .menu-principal-container { //nav
-    position: absolute;
+    position: fixed;
     top:0;
     left:50px;
     z-index: 2;
+    width: 100vw;
+    height: 100vh;
     transform : translateX(-200%);
-    background-color: rgba(80, 56, 11, 0.479);
+    background-color: rgb(157, 110, 23);
     border: black 2px solid;
     padding: 2%;
     @media screen and (min-width:700px) {
@@ -41,10 +43,12 @@
 
 }
 .menu-item{ //li
-  margin-bottom: 7px;
+  margin-bottom: 60px;
+  font-size: 4rem;
   color: rgba(108, 183, 221, 0.795);
   @media screen and (min-width:700px) {
     color: black;
+    margin-bottom: 7px;
    }
 }
 

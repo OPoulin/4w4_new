@@ -22,7 +22,21 @@ body {
    // min-height: 30vh;
 }
 
-.global > section,
+.global > section {
+    // flex : grow shrink basis
+    flex : 0 1 1100px;
+    // border : 1px solid #aaa;
+    // background-color : rgba(#000, .05 );
+    padding : 5rem 1rem;
+    @media screen and (min-width:700px) {
+        // flex : grow shrink basis
+        flex : 0 1 1100px;
+        // border : 1px solid #aaa;
+        // background-color : rgba(#000, .05 );
+        padding : 10rem 1rem;
+    }
+
+}
 .global > footer
 {
     // flex : grow shrink basis
