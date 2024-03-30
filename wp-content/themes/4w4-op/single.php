@@ -9,7 +9,7 @@
 
 <div id="accueil" class="global">
         <section class="accueil__section">
-            <h2>Accueil (h2)</h2>
+            <h2><a href="http://localhost/4w4-op/">Accueil</a></h2>
         <div class="section__cours">  
  <?php
 

@@ -546,7 +546,7 @@ body {
 
 .menu-item {
   margin-bottom: 60px;
-  font-size: clamp(2rem, 0.5rem + 6vw, 4rem);
+  font-size: clamp(2rem, 0.5rem + 3vw, 2.5rem);
   color: rgba(108, 183, 221, 0.795);
 }
 @media screen and (min-width: 700px) {
@@ -566,13 +566,23 @@ body {
   border: solid 3px black;
   border-radius: 10px;
   padding: 5px;
+  background-color: rgba(255, 81, 0, 0.244);
+}
+.menu-item a:hover {
+  background-color: rgba(246, 134, 83, 0.407);
 }
 @media screen and (min-width: 700px) {
   .menu-item a {
     border: none;
     padding: 0;
     font-size: 1rem;
+    background-color: transparent;
   }
+}
+
+.menu-item-89 {
+  position: static;
+  margin-top: 60px;
 }
 
 #chk_burger {
@@ -595,15 +605,15 @@ body {
   transform: translateX(0);
 }
 
-@media screen and (min-width: 700px) {
-  .container-taille ul {
-    display: none;
-  }
+.container-taille ul {
+  display: none;
 }
 
+.container-taille:hover > ul {
+  display: block;
+}
 @media screen and (min-width: 700px) {
   .container-taille:hover > ul {
-    display: block;
     position: absolute;
     z-index: 8;
     background-color: rgba(241, 171, 7, 0.95);
