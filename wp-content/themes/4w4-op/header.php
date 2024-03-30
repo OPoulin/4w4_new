@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thème gr2</title>
+    <title>Escapar</title>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css';?>" >
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css';?>" >
 
@@ -17,7 +17,7 @@
 
         <header class="entete__menu">
             <label id="burger" for="chk_burger">
-                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#000"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg>
+                <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" stroke="currentColor" color="#000"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg>
             </label>
             <input id="chk_burger" type="checkbox">
             <?php wp_nav_menu(array("container"=>"nav")); ?>

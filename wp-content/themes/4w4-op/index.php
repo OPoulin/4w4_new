@@ -18,7 +18,6 @@
                 <button class="entete__button">Nos destinations</button>
             </div>
         </section>
-<?php get_template_part("gabarit/vague"); ?>
     </div>
     <div id="accueil" class="global">
         <section class="accueil__section">

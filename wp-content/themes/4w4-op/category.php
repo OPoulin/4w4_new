@@ -15,7 +15,7 @@
         while(have_posts()): the_post(); ?>
         <div class="carte">
             <h4><?php the_title() ?></h4>
-            <p><?php echo wp_trim_words(get_the_content(),10); ?></p>
+            <p><?php echo wp_trim_words(get_the_content(), 20); ?></p>
             <p><a href="<?php echo get_permalink(); ?>">La suite</a> </p>
         </div>
        <?php endwhile; ?>

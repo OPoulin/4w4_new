@@ -119,13 +119,20 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 /* Class utile                            */
 /* ////////////////////////////////////////// */
 .bgc-text {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 248, 118, 0.415);
   padding: 15px 20px;
+  border-radius: 30px;
+  border: 2px rgba(0, 0, 0, 0.111) solid;
 }
 @media screen and (min-width: 1100px) {
   .bgc-text {
     background-color: transparent;
   }
+}
+
+h2.bgc-text,
+h3.bgc-text {
+  text-shadow: 3px 5px 6px rgb(240, 239, 128);
 }
 
 /* ////////////////////////////////////////// */
@@ -206,6 +213,10 @@ blockquote::first-letter {
   font-size: clamp(1.5625rem, -0.2604rem + 5.8333vw, 3.75rem);
   font-weight: bold;
   color: var(--_couleur-blockquote-first-letter);
+}
+
+a {
+  text-decoration: none;
 }
 
 button.entete__button {
@@ -300,7 +311,6 @@ body {
 #entete {
   background-color: var(--_couleur-arriere);
   color: var(--_couleur);
-  position: relative;
 }
 
 #accueil {
@@ -387,7 +397,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding-top: 1.5;
+  padding-top: 1.5rem;
   gap: 1.5rem;
 }
 @media screen and (min-width: 700px) {
@@ -418,7 +428,7 @@ body {
 
 @media screen and (min-width: 1100px) {
   .entete__header__texte {
-    background-position: 100% 90%;
+    background-position: 100% 100%;
     align-items: flex-start;
   }
   .entete__header__button {
@@ -501,16 +511,21 @@ body {
   width: 100vw;
   height: 100vh;
   transform: translateX(-200%);
-  background-color: rgb(157, 110, 23);
+  background-image: linear-gradient(20deg, rgb(172, 90, 14), rgb(196, 149, 9));
   border: black 2px solid;
-  padding: 2%;
+  padding: 5%;
+  z-index: 10;
 }
 @media screen and (min-width: 700px) {
   .menu-principal-container {
+    width: auto;
+    height: auto;
     position: static;
     transform: translateX(0);
     background-color: rgba(0, 0, 0, 0);
+    background-image: none;
     border: none;
+    padding: 1%;
   }
 }
 
@@ -531,13 +546,32 @@ body {
 
 .menu-item {
   margin-bottom: 60px;
-  font-size: 4rem;
+  font-size: clamp(2rem, 0.5rem + 6vw, 4rem);
   color: rgba(108, 183, 221, 0.795);
 }
 @media screen and (min-width: 700px) {
   .menu-item {
     color: black;
     margin-bottom: 7px;
+    font-size: 1rem;
+    padding: 15px;
+  }
+  .menu-item:hover {
+    background-color: rgba(241, 171, 7, 0.95);
+  }
+}
+
+.menu-item a {
+  text-decoration: none;
+  border: solid 3px black;
+  border-radius: 10px;
+  padding: 5px;
+}
+@media screen and (min-width: 700px) {
+  .menu-item a {
+    border: none;
+    padding: 0;
+    font-size: 1rem;
   }
 }
 
@@ -559,4 +593,21 @@ body {
 
 #chk_burger:checked ~ .menu-principal-container {
   transform: translateX(0);
+}
+
+@media screen and (min-width: 700px) {
+  .container-taille ul {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .container-taille:hover > ul {
+    display: block;
+    position: absolute;
+    z-index: 8;
+    background-color: rgba(241, 171, 7, 0.95);
+    padding: 10px;
+    margin-left: -15px;
+  }
 }/*# sourceMappingURL=style.css.map */

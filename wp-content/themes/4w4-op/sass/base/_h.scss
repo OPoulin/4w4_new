@@ -83,3 +83,7 @@ blockquote::first-letter{
     font-weight: bold;
     color : var(--_couleur-blockquote-first-letter);
 }
+
+a {
+    text-decoration: none;
+}

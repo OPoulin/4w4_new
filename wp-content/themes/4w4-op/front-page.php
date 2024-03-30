@@ -14,13 +14,12 @@
                 <h2 class="bgc-text"><?php echo get_bloginfo('description'); ?></h2>
                 <h3 class="bgc-text">TIM - Collège de Maisonneuve</h3>
             </div>   
-            <div class="entete__header__button"><button class="entete__button">Événements</button></div>
+            <div class="entete__header__button"><button class="entete__button"><a href="http://localhost/4w4-op/index.php/category/aventure/">À l'aventure</a></button></div>
         </section>
-<?php get_template_part("gabarit/vague"); ?>
     </div>
     <div id="accueil" class="global">
         <section class="accueil__section">
-            <h2>Accueil (h2)</h2>
+            <h2>Souhaitez la bienvenue à des vacances bien mérité</h2>
         <div class="section__cours">  
  <?php
 /*
@@ -45,7 +44,8 @@ the_title() // echo du titre
     </div>
     <div id="galerie" class="global diagonal">
         <section class="galerie__section">
-            <h2>Galerie  (h2)</h2>
+            <h2>Galerie</h2>
+            <?php echo do_shortcode('[metaslider id="164"]');?>
             <p>Lorem ipsum dolor sit amet,<a href="#">Lorem, ipsum.</a>  consectetur adipisicing elit. Minima <a href="#">Lorem, ipsum.</a>  velit qui unde odit quae, magni labore maiores facilis obcaecati dolore, ullam facere. Ducimus veniam reprehenderit, temporibus ab at possimus fugit?</p>
             <blockquote>Galerie ipsum, dolor sit amet consectetur adipisicing elit. Accusantium a, repellat alias qui ut in ratione optio quia quae minus repudiandae ducimus aliquid aperiam unde atque tempore non. Non, magnam.</blockquote>
         </section>
