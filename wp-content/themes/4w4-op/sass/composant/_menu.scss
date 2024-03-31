@@ -18,7 +18,7 @@
     width: 100vw;
     height: 100vh;
     transform : translateX(-200%);
-    background-image: linear-gradient(20deg, rgb(172, 90, 14), rgb(196, 149, 9));
+    background-image: linear-gradient(0deg, rgb(232, 95, 57), rgb(211, 157, 30));
     border: black 2px solid;
     padding: 5%;
     z-index: 10;
@@ -79,9 +79,15 @@
    }
 }
 
+/*Le menu se cache si l'on arrete de hover par dessus le nav entre 700px et 1100px de window width (A CORRIGER)*/
+
 .menu-item-89 {
   position: static;
   margin-top: 60px;
+  
+  @media screen and (min-width:700px) {
+    margin: auto;
+  }
 }
 
 #chk_burger{
@@ -105,6 +111,9 @@
 
 .container-taille ul {
     display: none;
+    &:hover {
+      display: block;
+    }
 
 }
 
