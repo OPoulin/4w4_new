@@ -1,15 +1,15 @@
 /*
-Theme Name: theme-gr2
+Theme Name: Escapar
 Theme URI: https://referenced.ca
-Author: Eddy Martin
+Author: Olivier Poulin
 Author URI: https://wordpress.org/
-Description: Thème de base développé dans le cours 4W4
+Description: Thème du TP1 de web
 Version: 1.0
 
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-gr2
+Text Domain: Escapar
 Ce thème a été développé dans le cadre du cours 4W4
 */
 
@@ -24,6 +24,7 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* Class utile                            */
 /* ////////////////////////////////////////// */
 @import "utile/local";
+@import "utile/flexbox";
 
 /* ////////////////////////////////////////// */
 /* règles de base                             */

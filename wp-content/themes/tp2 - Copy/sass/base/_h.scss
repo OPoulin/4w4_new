@@ -1,0 +1,101 @@
+/*
+Sélecteur textuel de base
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
+https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiI5MDBweCIsIm1pbkZvbnRTaXplIjoiMTZweCIsIm1heEZvbnRTaXplIjoiNDhweCJ9
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fenix&family=Madimi+One&display=swap');
+
+
+h1 {
+    font-size: clamp(1.875rem, -1.25rem + 10vw, 5.625rem);
+    text-shadow: 3px 5px 6px var(--_couleur-ombrage);
+    font-weight: bold;
+    letter-spacing: -3px;
+    font-family: "Madimi One", sans-serif;
+}
+
+h1.page-title {
+    font-size: clamp(1.875rem, -1.25rem + 6vw, 5.625rem);
+}
+
+h2 { 
+    font-size: clamp(1.5625rem, -0.2604rem + 5.8333vw, 3.75rem);
+    font-weight: bold;
+    font-family: "Madimi One", sans-serif;
+}
+
+.texte_section {
+    margin-bottom: 2vw;
+}
+
+h3 {
+
+   font-size: clamp(1.4375rem, 0.0313rem + 4.5vw, 3.125rem);
+   font-family: "Madimi One", sans-serif;
+   font-weight: bold;
+
+}
+
+h4 {
+    font-family: "Fenix", serif;
+}
+
+h4.texte_404 {
+    font-family: "Fenix", serif;
+    font-size: clamp(1.4375rem, 0.0313rem + 2.5vw, 1.875rem);
+    margin-bottom: 15px;
+}
+
+h5 {
+    font-family: "Fenix", serif;
+}
+h6 {
+    font-family: "Fenix", serif;
+}
+
+p {
+    font-size: clamp(1rem, 0.4792rem + 1.6667vw, 1.625rem);
+    line-height: 1.8rem;
+    padding : 2rem 0;
+    font-family: "Fenix", serif;
+}
+
+ul {
+    font-family: "Madimi One", sans-serif;
+}
+
+li {
+    font-family: "Madimi One", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(5, 0, 34);
+    &:active {
+        color: rgb(15, 0, 98);
+    }
+}
+
+blockquote {
+    background-color: var(--_couleur-arriere-blockquote);
+    color : var(--_couleur-blockquote);
+    padding : 2rem;
+    width : 95%;
+    font-size: clamp(1.25rem, 0.7292rem + 1.6667vw, 1.875rem);
+    font-style: italic;
+    border-left: 10px solid var(--_couleur-bordure);
+    font-family: "Fenix", serif;
+
+}
+
+blockquote::first-letter{
+   font-size: clamp(1.5625rem, -0.2604rem + 5.8333vw, 3.75rem);
+    font-weight: bold;
+    color : var(--_couleur-blockquote-first-letter);
+}
+
+a {
+    text-decoration: none;
+}

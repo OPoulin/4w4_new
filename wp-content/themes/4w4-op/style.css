@@ -1,16 +1,16 @@
 @charset "UTF-8";
 /*
-Theme Name: theme-gr2
+Theme Name: Escapar
 Theme URI: https://referenced.ca
-Author: Eddy Martin
+Author: Olivier Poulin
 Author URI: https://wordpress.org/
-Description: Thème de base développé dans le cours 4W4
+Description: Thème du TP1 de web
 Version: 1.0
 
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-gr2
+Text Domain: Escapar
 Ce thème a été développé dans le cadre du cours 4W4
 */
 /* ////////////////////////////////////////// */
@@ -136,6 +136,24 @@ h3.bgc-text {
   text-shadow: 3px 5px 6px rgb(240, 239, 128);
 }
 
+.flexbox {
+  margin-top: 2vw;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1100px) {
+  .flexbox {
+    padding: 0;
+  }
+}
+
+.flexbox .carte:nth-of-type(10) {
+  display: none;
+}
+
 /* ////////////////////////////////////////// */
 /* règles de base                             */
 /* ////////////////////////////////////////// */
@@ -154,10 +172,18 @@ h1 {
   font-family: "Madimi One", sans-serif;
 }
 
+h1.page-title {
+  font-size: clamp(1.875rem, -1.25rem + 6vw, 5.625rem);
+}
+
 h2 {
   font-size: clamp(1.5625rem, -0.2604rem + 5.8333vw, 3.75rem);
   font-weight: bold;
   font-family: "Madimi One", sans-serif;
+}
+
+.texte_section {
+  margin-bottom: 2vw;
 }
 
 h3 {
@@ -304,7 +330,7 @@ body {
 }
 
 .entete__menu, .entete__header {
-  flex: 0 1 1500px;
+  flex: 0 1 1300px;
   padding: 3rem 0 0 0;
   position: relative;
 }
@@ -330,6 +356,50 @@ body {
   background-color: var(--_couleur-arriere);
   color: var(--_couleur);
   position: relative;
+}
+
+.site__main {
+  font-family: "Madimi One", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--couleur-arriere-accueil);
+  padding: 4rem;
+}
+
+.evenement__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recherche__section {
+  max-height: fit-content;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.recherche__section article {
+  border: 5px rgba(0, 0, 0, 0.237) solid;
+  border-radius: 20px;
+  padding: 2rem;
+  flex: 0 1 900px;
+}
+
+.recherche__section article h5 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2%;
+  text-decoration: underline;
+}
+
+.recherche__section article hr {
+  display: none;
 }
 
 #footer {
@@ -379,6 +449,7 @@ body {
   background-image: linear-gradient(90deg, var(--couleur-arriere-menu), var(--couleur-arriere-menu-2));
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border: solid rgba(0, 0, 0, 0.115) 2px;
@@ -451,50 +522,89 @@ body {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 4rem;
+  margin: 4rem;
 }
 
 .sociaux svg {
   fill: rgb(255, 72, 0);
 }
 
-.recherche {
-  display: flex;
-  border: 1px solid #aaa;
-  justify-content: center;
+/* ANCIENNE SEARCHBAR
+.recherche{
+    display: flex;
+    border : 1px solid #aaa;
+    justify-content: center;
 }
 
-.recherche__input {
-  display: block;
-  background-color: rgb(58, 58, 136);
-  color: rgb(228, 228, 228);
-}
-.recherche__input::placeholder {
-  color: rgb(199, 199, 199);
-  /*margin-left: 5px;*/
+.recherche__input{
+    display: block;
+    background-color: rgb(58, 58, 136);
+    color: rgb(228, 228, 228);
+    &::placeholder {
+        color: rgb(199, 199, 199);
+       margin-left: 5px;
+    }
 }
 
-.recherche__button {
-  background-image: linear-gradient(60deg, rgb(82, 82, 213), rgb(7, 7, 122));
-  padding: 5px;
+
+.recherche__button{
+    background-image: linear-gradient(60deg, rgb(82, 82, 213), rgb(7, 7, 122));
+    padding: 5px;
 }
 
 input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    content: URL("images/delete.png");
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+   }
+
+.icone-recherche {
+    color: rgb(228, 228, 228);
+}
+*/
+input::-webkit-search-cancel-button {
   -webkit-appearance: none;
   content: URL("images/delete.png");
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
 }
 
-.icone-recherche {
-  color: rgb(228, 228, 228);
+.recherche {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.recherche__input {
+  font-family: "Madimi One", sans-serif;
+  padding: 0.5rem;
+  margin-right: 10px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  background-color: rgba(228, 228, 228, 0.911);
+}
+.recherche__input::placeholder {
+  color: rgba(0, 0, 0, 0.275);
+}
+
+.recherche__bouton {
+  padding: 0.6rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.239);
+}
+.recherche__bouton:hover {
+  background-color: rgba(255, 255, 255, 0.451);
 }
 
 .section__cours {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin: 2.5rem;
 }
 
 .carte {
@@ -505,6 +615,8 @@ input::-webkit-search-cancel-button {
   align-items: center;
   flex: 1 0 252.5px;
   background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+  border-radius: 20px;
+  border: ridge 2px black;
 }
 
 .carte * {
@@ -514,6 +626,19 @@ input::-webkit-search-cancel-button {
 .carte .post-categories {
   list-style-type: none;
   display: flex;
+}
+
+.carte h4::first-letter {
+  font-size: 2.5rem;
+  color: rgb(69, 52, 3);
+}
+
+.carte h4 {
+  font-size: 1.6rem;
+}
+
+.lien__carte {
+  text-decoration: underline;
 }
 
 /*
@@ -528,6 +653,7 @@ input::-webkit-search-cancel-button {
 </ul>
 </nav>
 */
+/*HEADER*/
 .menu-principal-container {
   position: fixed;
   top: 0;
@@ -572,7 +698,7 @@ input::-webkit-search-cancel-button {
 .menu-item {
   margin-bottom: 60px;
   font-size: clamp(2rem, 0.5rem + 3vw, 2.5rem);
-  color: rgba(108, 183, 221, 0.795);
+  color: rgba(112, 108, 221, 0.852);
 }
 @media screen and (min-width: 700px) {
   .menu-item {
@@ -605,15 +731,30 @@ input::-webkit-search-cancel-button {
   }
 }
 
-/*Le menu se cache si l'on arrete de hover par dessus le nav entre 700px et 1100px de window width (A CORRIGER)*/
-.menu-item-89 {
+/* Le menu se cache si l'on arrete de hover par dessus le nav entre 700px et 1100px de window width (A CORRIGER)
+   N'arrive que dans la page d'accueil*/
+/*Incapable de retirer les marqueurs de sous-menu de WordPress (A CORRIGER)*/
+.menu-item-has-children .sub-menu li {
   position: static;
   margin-top: 60px;
 }
 @media screen and (min-width: 700px) {
-  .menu-item-89 {
+  .menu-item-has-children .sub-menu li {
     margin: auto;
   }
+}
+
+.menu-item-has-children .sub-menu li a {
+  margin-left: 3rem;
+}
+@media screen and (min-width: 700px) {
+  .menu-item-has-children .sub-menu li a {
+    margin-left: auto;
+  }
+}
+
+.sub-menu .menu-item {
+  list-style-type: none;
 }
 
 #chk_burger {
@@ -636,6 +777,10 @@ input::-webkit-search-cancel-button {
   transform: translateX(0);
 }
 
+.container-taille > a:active {
+  pointer-events: none;
+}
+
 .container-taille ul {
   display: none;
 }
@@ -656,21 +801,35 @@ input::-webkit-search-cancel-button {
   }
 }
 
-/* Testé avec MetaSlider et Soliloquy et les deux ne fonctionnent pas pour le moment present
-   Le diaporama aurait ete place au niveaux de la gallerie par dessus le texte et le blockquote*/
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+/*GALERIE*/
+/*FOOTER*/
+.lien {
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
-/* Hide the images by default */
+#menu-footer {
+  list-style-type: none;
+}
+
+#menu-footer .menu-item {
+  margin: 30px;
+  font-size: clamp(1rem, 0.5rem + 1.5vw, 3rem);
+  color: black;
+}
+
+/* Testé avec MetaSlider et Soliloquy et les deux ne fonctionnent pas pour le moment present*/
+/*Creation d'un slideshow custom par HMTL / JS*/
+.slideshow-container {
+  position: relative;
+  margin: 1rem;
+}
+
 .images__slideshow {
   display: none;
 }
 
-/* Next & previous buttons */
 .suivant, .precedent {
   cursor: pointer;
   position: absolute;
@@ -686,38 +845,41 @@ input::-webkit-search-cancel-button {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .suivant {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .precedent:hover, .suivant:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
 .texte {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 4px;
   width: 100%;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-family: "Madimi One", sans-serif;
 }
 
-/* Number text (1/3 etc) */
 .numero__texte {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 1rem;
   padding: 8px 12px;
   position: absolute;
   top: 0;
+  font-family: "Madimi One", sans-serif;
 }
 
-/* The dots/bullets/indicators */
+.slogan__blockquote {
+  margin-top: 3rem;
+  margin-left: 16px;
+}
+
 .point {
   cursor: pointer;
   height: 15px;
@@ -733,7 +895,6 @@ input::-webkit-search-cancel-button {
   background-color: #717171;
 }
 
-/* Fading animation */
 .fondu {
   animation-name: fondu;
   animation-duration: 1.5s;

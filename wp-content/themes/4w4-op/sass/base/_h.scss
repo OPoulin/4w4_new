@@ -18,11 +18,18 @@ h1 {
     font-family: "Madimi One", sans-serif;
 }
 
+h1.page-title {
+    font-size: clamp(1.875rem, -1.25rem + 6vw, 5.625rem);
+}
 
 h2 { 
     font-size: clamp(1.5625rem, -0.2604rem + 5.8333vw, 3.75rem);
     font-weight: bold;
     font-family: "Madimi One", sans-serif;
+}
+
+.texte_section {
+    margin-bottom: 2vw;
 }
 
 h3 {
@@ -63,8 +70,6 @@ li {
         color: rgb(15, 0, 98);
     }
 }
-
-hr {}
 
 blockquote {
     background-color: var(--_couleur-arriere-blockquote);

@@ -45,4 +45,34 @@
   <span class="point" onclick="imageActuelle(5)"></span>
 </div>
 
-<script></script>
+<script>
+   /*Code recupere du fichier js*/
+   let indexImage = 1;
+montrerImage(indexImage);
+
+// Next/previous controls
+function rajouterImage(n) {
+  montrerImage(indexImage += n);
+}
+
+// Thumbnail image controls
+function imageActuelle(n) {
+  montrerImage(indexImage = n);
+}
+
+function montrerImage(n) {
+  let i;
+  let images = document.getElementsByClassName("images__slideshow");
+  let points = document.getElementsByClassName("point");
+  if (n > images.length) {indexImage = 1}
+  if (n < 1) {indexImage = images.length}
+  for (i = 0; i < images.length; i++) {
+    images[i].style.display = "none";
+  }
+  for (i = 0; i < points.length; i++) {
+    points[i].className = points[i].className.replace(" active", "");
+  }
+  images[indexImage-1].style.display = "block";
+  points[indexImage-1].className += " active";
+}
+</script>

@@ -1,0 +1,85 @@
+.gabarit_404 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.assembler_404 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0 1 1100px;
+    text-align: center;
+}
+
+.image_404 {
+    display: none;
+    @media screen and (min-width:700px) {
+        display: block;
+        width: 50%;
+        height: auto;
+    }
+}
+
+.ensemble_404 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+.conteneur_404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bouton_retour {
+    width: 90%;
+    padding-top: 2.6vw;
+    padding-bottom: 2.6vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-family: "Madimi One", sans-serif;
+    border-radius: 70px;
+    border: rgba(69, 38, 0, 0.62) 5px solid;
+    font-size: 3vw;
+    background-color: rgba(213, 134, 24, 0.69);
+    margin: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    &:hover {
+        background-color: rgba(213, 134, 24, 0.53);
+    }
+    &:active {
+        background-color: rgba(213, 134, 24, 0.83);
+    }
+    @media screen and (min-width:1100px) {
+        font-size: 2vw;
+    }
+}
+
+.les_categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    @media screen and (min-width:700px) {
+        flex-wrap: nowrap;
+    }
+}
+
+.une_categorie {
+    list-style: none;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.319);
+    }
+}

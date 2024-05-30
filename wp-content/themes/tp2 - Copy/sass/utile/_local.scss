@@ -1,0 +1,15 @@
+.bgc-text {
+    background-color: rgba(255, 248, 118, 0.415);
+    padding : 15px 20px;
+    border-radius: 30px;
+    border: 2px rgba(0, 0, 0, 0.111) solid;
+    @media screen and (min-width: 1100px) {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+h2.bgc-text,
+h3.bgc-text {
+    text-shadow: 3px 5px 6px rgb(240, 239, 128);
+}
