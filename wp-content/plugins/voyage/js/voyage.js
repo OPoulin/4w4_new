@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let restapiBoutons = galerie.querySelector("section");
   if (restapiBoutons) {
     restapiBoutons.classList.add("boutons_restapi");
-  } else {
+  } else { 
     console.error("La section dans 'galerie' n'existe pas dans le DOM");
   }
   
