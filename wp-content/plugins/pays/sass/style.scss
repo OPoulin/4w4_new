@@ -1,0 +1,18 @@
+.dbp-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dbp-button {
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.dbp-button:hover {
+    background-color: #005177;
+}
