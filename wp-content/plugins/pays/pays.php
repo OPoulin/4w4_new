@@ -32,20 +32,20 @@ add_action('wp_enqueue_scripts', 'op_pays_enqueue');
 /* Création de la liste des destinations en HTML */
 function creation_destinations(){
     $contenu = '
-    <button id="cat_1" class="bouton__categorie">France</button>
-    <button id="cat_2" class="bouton__categorie">États-Unis</button>
-    <button id="cat_3" class="bouton__categorie">Canada</button>
-    <button id="cat_4" class="bouton__categorie">Argentine</button>
-    <button id="cat_5" class="bouton__categorie">Chili</button>
-    <button id="cat_6" class="bouton__categorie">Belgique</button>
-    <button id="cat_7" class="bouton__categorie">Maroc</button>
-    <button id="cat_8" class="bouton__categorie">Mexique</button>
-    <button id="cat_9" class="bouton__categorie">Japon</button>
-    <button id="cat_10" class="bouton__categorie">Italie</button>
-    <button id="cat_11" class="bouton__categorie">Islande</button>
-    <button id="cat_12" class="bouton__categorie">Chine</button>
-    <button id="cat_13" class="bouton__categorie">Grèce</button>
-    <button id="cat_14" class="bouton__categorie">Suisse</button>
+    <button id="btn_1" class="bouton__pays">France</button>
+    <button id="btn_2" class="bouton__pays">États-Unis</button>
+    <button id="btn_3" class="bouton__pays">Canada</button>
+    <button id="btn_4" class="bouton__pays">Argentine</button>
+    <button id="btn_5" class="bouton__pays">Chili</button>
+    <button id="btn_6" class="bouton__pays">Belgique</button>
+    <button id="btn_7" class="bouton__pays">Maroc</button>
+    <button id="btn_8" class="bouton__pays">Mexique</button>
+    <button id="btn_9" class="bouton__pays">Japon</button>
+    <button id="btn_10" class="bouton__pays">Italie</button>
+    <button id="btn_11" class="bouton__pays">Islande</button>
+    <button id="btn_12" class="bouton__pays">Chine</button>
+    <button id="btn_13" class="bouton__pays">Grèce</button>
+    <button id="btn_14" class="bouton__pays">Suisse</button>
     <div class="contenu__restapi"></div>';
     return $contenu;
 }
