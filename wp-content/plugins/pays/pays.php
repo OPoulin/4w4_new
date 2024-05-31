@@ -29,8 +29,8 @@ wp_enqueue_script(  'em_plugin_pays_js',
                     true);
 }
 add_action('wp_enqueue_scripts', 'op_pays_enqueue');
-/* Création de la liste des destinations en HTML */
-function creation_destinations(){
+/* Création de la liste des pays en HTML */
+function creation_pays(){
     $contenu = '
     <button id="btn_1" class="bouton__pays">France</button>
     <button id="btn_2" class="bouton__pays">États-Unis</button>
@@ -50,4 +50,4 @@ function creation_destinations(){
     return $contenu;
 }
 
-add_shortcode('em_destination', 'creation_destinations');
+add_shortcode('op_pays', 'creation_pays');
