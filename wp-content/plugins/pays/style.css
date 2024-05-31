@@ -11,8 +11,40 @@
   border: none;
   cursor: pointer;
   border-radius: 3px;
+  text-decoration: none;
 }
 
 .dbp-button:hover {
   background-color: #005177;
+}
+
+.dbp-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.dbp-posts-list {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.dbp-posts-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dbp-posts-list li {
+  margin: 5px 0;
+}
+
+.dbp-posts-list li a {
+  text-decoration: none;
+  color: #0073aa;
+}
+
+.dbp-posts-list li a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
