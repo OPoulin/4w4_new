@@ -11,29 +11,29 @@ jQuery(document).ready(function($) {
 
         $.ajax({
             url: dbp_ajax_obj.ajax_url,
-            type: 'post',
+            type: 'get',
             data: {
-                action: 'dbp_fetch_posts',
-                category: category
+                category_name: category,
+                post_type: 'post',
+                per_page: 5
             },
             beforeSend: function() {
                 postsContainer.html('<p>Loading...</p>').slideDown();
             },
             success: function(response) {
-                if (response.success) {
-                    var posts = response.data;
+                if (response.length > 0) {
                     var html = '<ul>';
-                    $.each(posts, function(i, post) {
-                        html += '<li><a href="' + post.link + '">' + post.title + '</a></li>';
+                    $.each(response, function(i, post) {
+                        html += '<li><a href="' + post.link + '">' + post.title.rendered + '</a></li>';
                     });
                     html += '</ul>';
                     postsContainer.html(html);
                 } else {
-                    postsContainer.html('<p>' + response.data + '</p>');
+                    postsContainer.html('<p>No articles found in this category.</p>');
                 }
             },
             error: function() {
-                postsContainer.html('<p>An error occurred while fetching posts.</p>');
+                postsContainer.html('<p>An error occurred while fetching articles.</p>');
             }
         });
     });
